@@ -1,0 +1,20 @@
+<ion-view>
+  <ion-content>
+    <div class="list card" ng-repeat="image in imageList">
+
+      <div class="item item-avatar userInfo" ui-sref="tab.userDetail({userId : image.user.id})">
+        <img ng-src="{{image.user.avatar_url}}">
+        <h2 style="letter-spacing: 2px">{{image.title | uppercase}}</h2>
+        <p >{{image.user.name + ' | ' +image.user.location}}</p>
+      </div>
+
+      <div class="item item-image">
+        <img data-ng-src="{{image.images.hidpi}}">
+      </div>
+
+      <div class="item assertive">
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>
